@@ -1,7 +1,7 @@
 Summary:	Simple unified package and service management
 Name:		xsync
 Version:	0.8.3
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		Applications
 Source0:	http://www.openfusion.com.au/labs/dist/%{name}-%{version}.tar.gz
@@ -50,7 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_sbindir}/xsync_functions
 %attr(755,root,root) %{_sbindir}/xsync
 %attr(755,root,root) %{_sbindir}/xsync-*
-%attr(755,root,root) %config %{_sysconfdir}/xsync
-%attr(755,root,root) %config /var/cache/xsync
+%{_sysconfdir}/xsync
+/var/cache/xsync
 %config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/xsync
 %{_mandir}/man8/*
